@@ -1,0 +1,3 @@
+#compdef funwith
+
+_arguments "1: :($(/usr/bin/basename -s .lua ~/.lmodfiles/*.lua))"
