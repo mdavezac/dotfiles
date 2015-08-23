@@ -25,8 +25,10 @@ for filename in split(globpath("~/.dotfiles/vim/before", '*.vim'), "\n")
   exe 'source '.filename
 endfor
 
-" turn on pathongen
-execute pathogen#infect()
+" turn on bundle
+if filereadable(expand("~/.vim/vundles.vim"))
+  source ~/.vim/vundles.vim
+endif
 
 " Change leader to a comma because the backslash is too far away
 " That means all \x commands turn into ,x
@@ -102,12 +104,6 @@ set ignorecase      " Ignore case when searching...
 set smartcase       " ...unless we type a capital
 
 " ================ Plugin Settings ========================
-function! g:LoadPluginScripts()
-  for filename in split(globpath("~/.dotfiles/vim/settings", '*.vim'), "\n")
-    exe 'source '.filename
-  endfor
-endfunction
-augroup plugin_initialize
-  autocmd!
-  autocmd VimEnter * call LoadPluginScripts()
-augroup END
+for filename in split(globpath("~/.dotfiles/vim/settings", '*.vim'), "\n")
+  exe 'source '.filename
+endfor
