@@ -1,5 +1,5 @@
 Plugin 'sheerun/vim-polyglot'
-Plugin 'erwandew/supertab'
+Plugin 'ervandew/supertab'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
