@@ -3,4 +3,4 @@ export VISUAL=gvim
 LUAROCKS_PREFIX=/opt/boxen/homebrew/
 export LUA_PATH="$LUAROCKS_PREFIX/share/lua/5.2/?.lua;$LUAROCKS_PREFIX/share/lua/5.2/?/init.lua;;"
 export LUA_CPATH="$LUAROCKS_PREFIX/lib/lua/5.2/?.so;;"
-export PATH=/opt/boxen/homebrew/bin/:$PATH:/opt/vagrant/bin
+export PATH=$PATH:/opt/vagrant/bin
