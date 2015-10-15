@@ -19,7 +19,7 @@ Host bitbucket bitbucket.org
 Host newlegion login09.external.legion.ucl.ac.uk
   hostname login09.external.legion.ucl.ac.uk
   User cceamda
-  ForwardAgent no
+  ForwardAgent yes
   IdentityFile ~/.ssh/legion_dsa
   PreferredAuthentications publickey
 Host legion legion.rc.ucl.ac.uk
