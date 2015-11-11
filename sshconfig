@@ -35,7 +35,7 @@ Host jenkins
   ForwardAgent no
 Host jenkins_legion
   User ccsprsd
-  Hostname login08.external.legion.ucl.ac.uk
+  Hostname login09.external.legion.ucl.ac.uk
   IdentityFile ~/.ssh/legion_as_ccsprsd_dsa
   ForwardAgent yes
   # ProxyCommand ssh jenkins nc %h %p
