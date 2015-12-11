@@ -5,3 +5,6 @@ export LDFLAGS=-L/opt/boxen/homebrew/lib/
 export EDITOR=vim
 export VISUAL=gvim
 export CLICOLOR=1
+export HISTFILE=~/.zhistory
+export HISTSIZE=100000
+export HISTSAVE=100000
