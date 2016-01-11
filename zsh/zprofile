@@ -1,6 +1,5 @@
 export EDITOR=vim
 export VISUAL=gvim
-LUAROCKS_PREFIX=$(dirname $(dirname $(which luarocks)))
-export LUA_PATH="$LUAROCKS_PREFIX/share/lua/5.2/?.lua;$LUAROCKS_PREFIX/share/lua/5.2/?/init.lua;;"
-export LUA_CPATH="$LUAROCKS_PREFIX/lib/lua/5.2/?.so;;"
+export LUA_PATH="$HOMEBREW_ROOT\/share/lua/5.2/?.lua;$HOMEBREW_ROOT\/share/lua/5.2/?/init.lua;;"
+export LUA_CPATH="$HOMEBREW_ROOT\/lib/lua/5.2/?.so;;"
 export PATH=$PATH:/opt/vagrant/bin
