@@ -23,5 +23,7 @@ else
   end
 endif
 
-colorscheme solarized
-set background=dark
+if !empty(globpath(&rtp, 'colors/solarized.vim'))
+  colorscheme solarized
+  set background=dark
+endif
