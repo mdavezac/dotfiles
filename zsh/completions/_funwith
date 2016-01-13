@@ -1,6 +1,6 @@
 #compdef funwith
 
-if [[ -e "~/.lmodfiles" ]] ; then
+if [[ -e ~/.lmodfiles ]] ; then
   _arguments "1: :($(/usr/bin/basename -s .lua ~/.lmodfiles/*.lua))"
 else
   _arguments "1: :($(/usr/bin/basename -s .lua ~/.funwith/*.lua))"
