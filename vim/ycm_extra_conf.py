@@ -29,7 +29,8 @@
 # For more information, please refer to <http://unlicense.org/>
 
 from os import environ
-from os.path import basename, join, exists
+from glob import glob
+from os.path import basename, join, exists, dirname
 import os
 import ycm_core
 
@@ -71,6 +72,15 @@ if "CURRENT_FUN_WITH_HOMEDIR" in environ:
         with open(file, "r") as file:
             flags += file.read().split("\n")
 
+if "CMAKE_PREFIX_PATH" in environ:
+    for prefix in environ['CMAKE_PREFIX_PATH'].split(':'):
+        for subdir in ['include', join('include', 'eigen3')]:
+            if exists(join(prefix, subdir)):
+                flags.append("-I" + join(prefix, subdir))
+if "CMAKE_INCLUDE_PATH" in environ:
+    for path in environ['CMAKE_INCLUDE_PATH'].split(':'):
+        flags.append("-I" + path)
+
 # Set this to the absolute path to the folder (NOT the file!) containing the
 # compile_commands.json file to use that instead of 'flags'. See here for
 # more details: http://clang.llvm.org/docs/JSONCompilationDatabase.html
@@ -78,7 +88,6 @@ if "CURRENT_FUN_WITH_HOMEDIR" in environ:
 # Most projects will NOT need to set this to anything; you can just change the
 # 'flags' list of compilation flags. Notice that YCM itself uses that approach.
 compilation_database_folder = ''
-
 if os.path.exists( compilation_database_folder ):
   database = ycm_core.CompilationDatabase( compilation_database_folder )
 else:
