@@ -63,7 +63,7 @@ flags = [
 '-isystem',
 '/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/',
 '-isystem',
-'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/include/',
+'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/',
 ]
 
 if "CURRENT_FUN_WITH_HOMEDIR" in environ:
