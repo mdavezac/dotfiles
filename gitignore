@@ -46,3 +46,4 @@ Session.vim
 
 # ignore build directories
 *build*/
+.ipynb_checkpoints/
