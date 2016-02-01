@@ -4,18 +4,12 @@ Host github github.com
   HostName github.com
   IdentityFile ~/.ssh/github_rsa
   PreferredAuthentications publickey
-Host hemelb entropy.chem.ucl.ac.uk
-  hostname entropy.chem.ucl.ac.uk
-  User hg
-  PreferredAuthentications publickey
-  ForwardAgent no
-  IdentityFile ~/.ssh/hemelb_dsa
 Host bitbucket bitbucket.org
   hostname bitbucket.org
   User git
   PreferredAuthentications publickey
   ForwardAgent no
-  IdentityFile ~/.ssh/bitbucket_dsa
+  IdentityFile ~/.ssh/bitbucket_rsa
 Host newlegion login09.external.legion.ucl.ac.uk
   hostname login09.external.legion.ucl.ac.uk
   User cceamda
