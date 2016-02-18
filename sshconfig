@@ -36,3 +36,6 @@ Host jenkins_legion
 Host pma pm-a.rcdev.ucl.ac.uk
   Hostname pm-a.rcdev.ucl.ac.uk
   User cceamda
+Host macslave
+  Hostname rsd-js05d.rcdev.ucl.ac.uk
+  User cceamda
