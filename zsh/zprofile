@@ -3,4 +3,4 @@ export VISUAL=gvim
 export LUA_PATH="$HOMEBREW_ROOT\/share/lua/5.2/?.lua;$HOMEBREW_ROOT\/share/lua/5.2/?/init.lua;;"
 export LUA_CPATH="$HOMEBREW_ROOT\/lib/lua/5.2/?.so;;"
 export PATH=$PATH:/opt/vagrant/bin
-[[ -e ~/.salted_zprofile ]] && source ~/.salted_zprofile
+[[ -e ~/.salted/zprofile ]] && source ~/.salted/zprofile
