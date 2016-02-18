@@ -43,15 +43,10 @@ flags = [
 '-Werror',
 '-fexceptions',
 '-DNDEBUG',
-# This path will only work on OS X, but extra paths that don't exist are not
-# harmful
-'-isystem',
-'/usr/local/include',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/',
-'-isystem',
-'/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/',
 ]
+
+flags.append('-isystem')
+flags.append(join(dirname(dirname(dirname(ycm_core.__file__))), 'clang_includes', 'include'))
 
 if "CURRENT_FUN_WITH_HOMEDIR" in environ:
     file = join(environ["CURRENT_FUN_WITH_HOMEDIR"], ".cppconfig")
