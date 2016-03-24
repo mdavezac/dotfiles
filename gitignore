@@ -50,3 +50,7 @@ Session.vim
 
 # emacs
 \#*\#
+
+# python
+.cache/
+*.pyc
