@@ -40,3 +40,8 @@ Host pma pm-a.rcdev.ucl.ac.uk
 Host macslave
   Hostname rsd-js05d.rcdev.ucl.ac.uk
   User cceamda
+Host batman
+  Hostname login.archer.ac.uk
+  User batman
+  IdentityFile ~/.ssh/archer_rsa
+  ForwardAgent yes
