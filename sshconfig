@@ -44,4 +44,5 @@ Host batman
   Hostname login.archer.ac.uk
   User batman
   IdentityFile ~/.ssh/archer_rsa
+  PreferredAuthentications publickey
   ForwardAgent yes
