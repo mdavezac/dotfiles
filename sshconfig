@@ -46,3 +46,6 @@ Host batman
   IdentityFile ~/.ssh/archer_rsa
   PreferredAuthentications publickey
   ForwardAgent yes
+Host uncafedetrop
+  Hostname uncafedetrop.rits-ids.ucl.ac.uk
+  user mdavezac
