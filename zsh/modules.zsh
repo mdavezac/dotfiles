@@ -19,9 +19,13 @@ function funwith() {
   export CURRENT_FUN_WITH=$1
   module load $1
 
-  if ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
+  if ( [ -e "$HOME/.tmuxinator/$CURRENT_FUN_WITH.yml" ] ) ; then
+    tmuxinator start $CURRENT_FUN_WITH
+    nomorefun
+  elif ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
     chdir $CURRENT_FUN_WITH_DIR
   fi
+
 }
 function cdproject() {
   if ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
