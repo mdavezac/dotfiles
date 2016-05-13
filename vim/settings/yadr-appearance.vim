@@ -23,7 +23,8 @@ else
   end
 endif
 
-if !empty(globpath(&rtp, 'colors/solarized.vim'))
-  colorscheme solarized
-  set background=dark
-endif
+colorscheme github
+" if !empty(globpath(&rtp, 'colors/solarized.vim'))
+"   colorscheme solarized
+"   set background=dark
+" endif
