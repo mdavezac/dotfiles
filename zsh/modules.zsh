@@ -16,16 +16,15 @@ function funwith() {
     nomorefun
   fi
 
-  export CURRENT_FUN_WITH=$1
-  module load $1
-
-  if ( [ -e "$HOME/.tmuxinator/$CURRENT_FUN_WITH.yml" ] ) ; then
-    tmuxinator start $CURRENT_FUN_WITH
-    nomorefun
-  elif ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
-    chdir $CURRENT_FUN_WITH_DIR
+  if ( [ -e "$HOME/.tmuxinator/$1.yml" ] ) ; then
+    /usr/bin/env tmuxinator start $1
+  else
+    export CURRENT_FUN_WITH=$1
+    module load $1
+    if ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
+      chdir $CURRENT_FUN_WITH_DIR
+    fi
   fi
-
 }
 function cdproject() {
   if ( [ -n "$CURRENT_FUN_WITH_DIR" ] ) ; then
