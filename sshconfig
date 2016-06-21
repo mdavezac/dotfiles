@@ -4,6 +4,11 @@ Host github github.com
   HostName github.com
   IdentityFile ~/.ssh/github_rsa
   PreferredAuthentications publickey
+Host gist gist.github.com
+  User git
+  HostName gist.github.com
+  IdentityFile ~/.ssh/github_rsa
+  PreferredAuthentications publickey
 Host bitbucket bitbucket.org
   hostname bitbucket.org
   User git
