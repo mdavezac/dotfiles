@@ -54,3 +54,8 @@ Host batman
 Host uncafedetrop
   Hostname uncafedetrop.rits-ids.ucl.ac.uk
   user mdavezac
+Host data ssh.rd.ucl.ac.uk
+  Hostname ssh.rd.ucl.ac.uk
+  IdentityFile ~/.ssh/data_rsa
+  PreferredAuthentications publickey
+  user cceamda
